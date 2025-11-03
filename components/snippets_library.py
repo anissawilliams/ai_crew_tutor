@@ -2,7 +2,9 @@
 Code snippets library component
 """
 import streamlit as st
-from utils.snippets import CODE_SNIPPETS, get_affinity_tier, get_available_personas
+from utils.snippets import CODE_SNIPPETS, get_persona_snippets
+from utils.gamification import get_affinity_tier
+from utils.personas import get_available_personas
 
 def render_snippets_library(user_level, user_affinity):
     """Render code snippets library page"""
