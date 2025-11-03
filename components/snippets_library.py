@@ -7,7 +7,7 @@ from utils.gamification import get_affinity_tier
 from utils.personas import get_available_personas
 
 def render_snippets_library(user_level, user_affinity):
-    """Render the Code Snippets Library page"""
+    """Render code snippets library page"""
     st.header("💾 Code Snippets Library")
     st.markdown("Unlock code snippets by building affinity with your tutors!")
     
