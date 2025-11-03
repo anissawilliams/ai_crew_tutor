@@ -45,27 +45,27 @@ st.set_page_config(page_title="AI Java Tutor Pro", page_icon="🧠", layout="wid
 # LOAD CSS
 # ==========================
 def load_css():
-    """Load custom CSS styling"""
     st.markdown("""
-        <style>
-        /* Keep all your CSS from app.py here */
-        .level-card { ... }
-        .persona-card { ... }
-        .locked-persona { ... }
-        .xp-bar { ... }
-        .xp-fill { ... }
-        .xp-text { ... }
-        .streak-badge { ... }
-        .affinity-bar { ... }
-        .affinity-fill { ... }
-        .explanation-box { ... }
-        .code-review-box { ... }
-        .snippet-card { ... }
-        .snippet-locked { ... }
-        .reward-popup { ... }
-        @keyframes bounceIn { ... }
-        .stApp { background-attachment: fixed; }
-        </style>
+    <style>
+    /* trimmed same styles used previously - keep as-is in your project */
+    .level-card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 255, 255, 0.2); margin-bottom: 20px; }
+    .persona-card { padding: 20px; border-radius: 10px; color: white; margin: 10px 0; transition: transform 0.3s; border: 2px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); }
+    .persona-card:hover { transform: scale(1.02); }
+    .locked-persona { opacity: 0.5; filter: grayscale(100%); }
+    .xp-bar { height: 30px; background: rgba(0, 0, 0, 0.3); border-radius: 15px; overflow: hidden; position: relative; }
+    .xp-fill { height: 100%; background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%); transition: width 0.5s ease; }
+    .xp-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold; color: white; text-shadow: 0 0 10px rgba(0,0,0,0.5); }
+    .streak-badge { display: inline-flex; align-items: center; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 10px 20px; border-radius: 20px; font-size: 24px; font-weight: bold; color: white; }
+    .affinity-bar { height: 8px; background: rgba(255, 255, 255, 0.2); border-radius: 4px; overflow: hidden; margin-top: 5px; }
+    .affinity-fill { height: 100%; background: linear-gradient(90deg, #ffd93d 0%, #f5576c 100%); }
+    .explanation-box { background-color: rgba(230, 247, 255, 0.1); backdrop-filter: blur(10px); padding: 20px; border-radius: 10px; border-left: 4px solid #1890ff; margin: 15px 0; color: white; }
+    .code-review-box { background-color: rgba(40, 40, 60, 0.9); backdrop-filter: blur(10px); padding: 20px; border-radius: 10px; border-left: 4px solid #f5576c; margin: 15px 0; color: white; }
+    .snippet-card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 15px; border-radius: 10px; border: 2px solid rgba(255, 255, 255, 0.2); margin: 10px 0; }
+    .snippet-locked { opacity: 0.6; filter: grayscale(80%); }
+    .reward-popup { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 20px; box-shadow: 0 10px 50px rgba(0,0,0,0.5); z-index: 1000; text-align: center; animation: bounceIn 0.5s; }
+    @keyframes bounceIn { 0% { transform: translate(-50%, -50%) scale(0.3); } 50% { transform: translate(-50%, -50%) scale(1.05); } 100% { transform: translate(-50%, -50%) scale(1); } }
+    .stApp { background-attachment: fixed; }
+    </style>
     """, unsafe_allow_html=True)
 
 load_css()
