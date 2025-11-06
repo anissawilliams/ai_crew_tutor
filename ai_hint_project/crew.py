@@ -37,8 +37,8 @@ def get_llm():
         return llm
 
     except Exception as e:
-        print(f"⚠️ Exception occurred: {e}")
-        print("⚠️ Falling back to ChatOpenAI")
+        print(f"⚠️⚠️ Exception occurred: {e}")
+        print("⚠️⚠️ Falling back to ChatOpenAI")
 
         # Fallback to OpenAI if you have that key
         if "OPENAI_API_KEY" in st.secrets:
