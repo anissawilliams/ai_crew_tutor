@@ -77,7 +77,7 @@ try:
     from ai_hint_project.crew import create_crew
     AI_AVAILABLE = True
 except ImportError:
-    st.warning("⚠️ AI crew module not found. Running in demo mode.")
+    st.warning("⚠️⚠️⚠️ AI crew module not found. Running in demo mode.")
     AI_AVAILABLE = False
     def create_crew(persona, question):
         return f"[Demo Mode] {persona} would explain: {question[:50]}..."
